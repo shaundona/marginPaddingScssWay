@@ -1,4 +1,4 @@
-#Pencil & Fox SASS margin and padding classes
+# Pencil & Fox SASS margin and padding classes
 Open-source stylekit generator, optimized for quick reusable frontend styling
 
 ## How it works
