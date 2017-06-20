@@ -1,0 +1,167 @@
+/*------------------------------------*    #RESET
+\*------------------------------------*/
+/**
+ * Use border box on all elements
+ */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1;
+  max-width: 1280px;
+  margin: 0 auto; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+[role=main] {
+  flex: 1; }
+
+/*------------------------------------*
+    //ADJUSTABLE BREAKPOINTS - Mixin
+
+
+    // Ref: http://alwaystwisted.com/post.php?s=2013-04-01-my-media-query-mixin
+
+\*------------------------------------*/
+/*------------------------------------*
+    Examples: 
+
+    //min-width (20em)
+    .example {
+    @include mq(320) {
+        width: 100%;
+        }
+    }
+
+    
+    // min-width (20em) set & IE9 fallback support
+    .example {
+        @include mq(320, true) {
+            width: 100%;
+        }
+    }
+
+    // max-width (20em) & IE support false
+    .example {
+        @include mq(320, false, max) {
+            width: 100%;
+        }
+    }
+
+    //min-height
+    .example {
+        @include mq(320, false, min, height) {
+            width: 100%;
+        }
+    }
+
+    //max-height
+    .example {
+        @include mq(320, false, max, height) {
+            width: 100%;
+        }
+    }
+
+
+\*------------------------------------*/
+table.pf-table {
+  margin: 20px 0;
+  border: 1px solid #ddd; }
+  table.pf-table tr {
+    border-bottom: 1px solid #ddd; }
+  table.pf-table thead tr th {
+    padding: 16px 56px 16px 24px;
+    color: grey;
+    font-weight: normal;
+    font-size: 13px; }
+  table.pf-table tbody tr td {
+    padding: 16px 56px 16px 24px;
+    font-size: 14px; }
+
+@media (max-width: 768px) {
+  .pf-table.option-1 {
+    width: 100%; }
+  .pf-table.option-1 thead {
+    display: none; }
+  .pf-table.option-1 tr {
+    border-bottom: 3px solid #ddd;
+    display: block; }
+  .pf-table.option-1 td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    text-align: left; }
+    .pf-table.option-1 td:before {
+      content: attr(aria-label);
+      display: block;
+      clear: both;
+      font-weight: bold;
+      color: grey;
+      font-size: 0.8em; }
+  tr:hover > td {
+    background: transparent !important; }
+  .pf-table.option-1 tbody tr:first-child td {
+    border-top: none; }
+  .pf-table.option-1 tbody tr:first-child td:first-child {
+    border-top: 2px solid #dcdcdc; } }
+
+@media only screen and (max-width: 768px) {
+  .pf-table.option-2 {
+    width: 100%;
+    overflow: scroll;
+    display: block;
+    margin: 0;
+    padding: 20px; }
+    .pf-table.option-2:after {
+      content: "Scroll horizontally to view table";
+      background: #f5f5f5;
+      color: #666;
+      font-size: 13px;
+      border-radius: 5px;
+      padding: 5px 10px;
+      display: inline-block;
+      margin: 10px auto 20px auto; }
+    .pf-table.option-2 tr, .pf-table.option-2 th, .pf-table.option-2 td {
+      white-space: pre; } }

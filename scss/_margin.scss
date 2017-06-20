@@ -1,0 +1,58 @@
+// - Margin Classes
+$i : 0;
+@while $i <= 200 {
+  .margin-#{$i} {
+    margin: #{$i}px !important;
+  }
+  .margin-top-#{$i} {
+    margin-top: #{$i}px !important;
+  }
+  .margin-left-#{$i} {
+    margin-left: #{$i}px !important;
+  }
+  .margin-bottom-#{$i} {
+    margin-bottom: #{$i}px !important;
+  }
+  .margin-right-#{$i} {
+    margin-right: #{$i}px !important;
+  }
+     
+  //negative margin classes
+  .margin-top-neg-#{$i} {
+    margin-top: -#{$i}px !important;
+  }
+  .margin-left-neg-#{$i} {
+    margin-left: -#{$i}px !important;
+  }
+  .margin-bottom-neg-#{$i} {
+    margin-bottom: -#{$i}px !important;
+  }
+  .margin-right-neg-#{$i} {
+    margin-right: -#{$i}px !important;
+  }    
+ 
+  $i : $i + 10;
+}
+
+//responsive margin
+$i : 0;
+@while $i <= 200 {
+    @include mq(768, false, max) {   
+      .margin-#{$i}-sm {
+        margin: #{$i}px !important;
+      }
+      .margin-top-#{$i}-sm {
+        margin-top: #{$i}px !important;
+      }
+      .margin-left-#{$i}-sm {
+        margin-left: #{$i}px !important;
+      }
+      .margin-bottom-#{$i}-sm {
+        margin-bottom: #{$i}px !important;
+      }
+      .margin-right-#{$i}-sm {
+        margin-right: #{$i}px !important;
+      }
+    }
+  $i : $i + 10;
+}

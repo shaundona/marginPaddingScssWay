@@ -1,0 +1,44 @@
+// - Padding Classes
+$i : 0;
+@while $i <= 200 {
+  .padding-#{$i} {
+    padding: #{$i}px !important;
+  }
+  .padding-top-#{$i} {
+    padding-top: #{$i}px !important;
+  }
+  .padding-left-#{$i} {
+    padding-left: #{$i}px !important;
+  }
+  .padding-bottom-#{$i} {
+    padding-bottom: #{$i}px !important;
+  }
+  .padding-right-#{$i} {
+    padding-right: #{$i}px !important;
+  }
+  $i : $i + 10;
+}
+
+
+//responsive padding
+$i : 0;
+@while $i <= 200 { 
+    @include mq(768, false, max) {
+        .padding-#{$i}-sm {
+        padding: #{$i}px !important;
+          }
+          .padding-top-#{$i}-sm {
+            padding-top: #{$i}px !important;
+          }
+          .padding-left-#{$i}-sm {
+            padding-left: #{$i}px !important;
+          }
+          .padding-bottom-#{$i}-sm {
+            padding-bottom: #{$i}px !important;
+          }
+          .padding-right-#{$i}-sm {
+            padding-right: #{$i}px !important;
+          }
+    }
+  $i : $i + 10;
+}

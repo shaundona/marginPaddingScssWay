@@ -1,0 +1,71 @@
+/*------------------------------------*\
+
+    //ADJUSTABLE BREAKPOINTS - Mixin
+
+
+    // Ref: http://alwaystwisted.com/post.php?s=2013-04-01-my-media-query-mixin
+
+\*------------------------------------*/
+
+
+$doc-font-size: 16;
+$mobile: 320; 
+$tablet: 760; 
+$desktop: 1200;
+
+@mixin mq($point, $IE9: false, $query1: min, $query2: width) {
+    @if $IE9 == true{
+        .lt-ie9 & {
+            @content;
+        }
+    }
+
+    @media (#{$query1}-#{$query2}: $point / $doc-font-size +em) {
+        @content;
+    }
+}
+
+
+
+/*------------------------------------*\
+
+    Examples: 
+
+    //min-width (20em)
+    .example {
+    @include mq(320) {
+        width: 100%;
+        }
+    }
+
+    
+    // min-width (20em) set & IE9 fallback support
+    .example {
+        @include mq(320, true) {
+            width: 100%;
+        }
+    }
+
+    // max-width (20em) & IE support false
+    .example {
+        @include mq(320, false, max) {
+            width: 100%;
+        }
+    }
+
+    //min-height
+    .example {
+        @include mq(320, false, min, height) {
+            width: 100%;
+        }
+    }
+
+    //max-height
+    .example {
+        @include mq(320, false, max, height) {
+            width: 100%;
+        }
+    }
+
+
+\*------------------------------------*/
