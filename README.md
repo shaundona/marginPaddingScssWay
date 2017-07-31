@@ -7,7 +7,7 @@ Open-source stylekit generator, optimized for quick reusable frontend styling
 - Using your new stylekit apply the classes to your project.
 
 ## Demo
-- http://www.pencilandfox.getforge.io/scrummylibrary/margin-padding-the-SCSS-way
+- https://www.pencilandfox.getforge.io/scrummylibrary/margin-padding-the-SCSS-way
 
 ## Requirements
 - SASS compiler
